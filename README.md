@@ -26,7 +26,7 @@ rootkit 是入侵者裝在機器上的惡意程式，作用是讓自己的行程
 
 以下流程在一台 Linux 開發機上編譯，把掃描器送到 CentOS 7.6–7.9 的目標主機，再把加密報告帶回開發機解開。
 
-取得原始碼：用 `git clone` 下載這個倉庫，或下載 ZIP 解壓縮，然後進入原始碼資料夾。Rust 用 rustup 安裝（https://rustup.rs），最低版本 1.85，需要網路（第一次編譯要下載相依套件）。第 3 步的 `rustup target add` 需要 rustup；發行版套件裝的 Rust 通常沒有 rustup。
+取得原始碼：用 `git clone` 下載這個倉庫，或下載 ZIP 解壓縮，然後進入原始碼資料夾。Rust 用 rustup 安裝（https://rustup.rs） ，最低版本 1.85，需要網路（第一次編譯要下載相依套件）。第 3 步的 `rustup target add` 需要 rustup；發行版套件裝的 Rust 通常沒有 rustup。
 
 1. 編譯解密工具：
 
