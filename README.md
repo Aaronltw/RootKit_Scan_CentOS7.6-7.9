@@ -1,4 +1,4 @@
-# rootkit-scan：CentOS 7.6–7.9 核心模組 rootkit 黑箱掃描器
+# rootkit-scan：CentOS 7.6–7.9 核心模組 rootkit 掃描器
 
 > [!WARNING]
 > 只在自己擁有、或已取得書面授權的機器上使用。掃描時要用 root 權限讀取大量系統資訊，未經授權對別人的機器使用可能違法。
