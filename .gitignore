@@ -1,0 +1,14 @@
+# 編譯產物
+target/
+
+# 金鑰：私鑰絕對不能推上去
+*.key
+rootkit-scan-private.key
+
+# 掃描報告與錄製檔（內含主機資訊，不要推上去）
+*.enc
+report-*.txt
+*.rec
+
+# 作業系統雜檔
+.DS_Store

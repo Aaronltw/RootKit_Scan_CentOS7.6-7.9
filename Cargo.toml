@@ -1,0 +1,23 @@
+[package]
+name = "rootkit-scan"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "CentOS 7.6–7.9 LKM rootkit black-box observation-path scanner"
+license = "GPL-3.0-only"
+publish = false
+
+[dependencies]
+# 報告加密：libsodium 相容的密封盒，匿名寄件者只用收件人公鑰上鎖，
+# 只有收件人私鑰能開。這是專案唯一一組外部相依，版本鎖在 Cargo.lock。
+crypto_box = { version = "0.9.1", features = ["seal", "getrandom"] }
+
+# 正式版是不依賴受檢機器任何軟體的靜態單一執行檔，所以要用 musl 目標編譯（musl 是一套小型 C 函式庫，
+# 編進執行檔裡，受檢機器就不需要裝任何東西）。
+# 編譯：cargo build --release --target x86_64-unknown-linux-musl
+[profile.release]
+opt-level = "z"
+panic = "abort"
+strip = true
+lto = true
+codegen-units = 1
